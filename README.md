@@ -1,7 +1,7 @@
 # cx-mooc-downloader
 超星慕课视频批量下载
 
-事先安装模块：
+需要安装的模块：
 
 fake -useragent:
 `pip install fake-useragent`
