@@ -54,10 +54,10 @@ for v_url in url_list:
     req = requests.get('http://d0.ananas.chaoxing.com/download/' + data['objectid'], headers=headers)
     with open(save_dir+'/'+str(num)+'.'+v_soup.find(id="nodeTitleEle").text + '.mp4', "wb") as f:# 标题:soup.find(id="nodeTitleEle").text
         f.write(req.content)
-    print(v_soup.find(id="nodeTitleEle").text+'complete！')
-    time.sleep(5+random.randint(1,11)) # 随机添加访问间隔
+    print(v_soup.find(id="nodeTitleEle").text+'complete！下载进度%d'%(num)+'/%d'%(len(v_url)))
+    time.sleep(5+random.randint(1,5)) # 随机添加访问间隔
     num+=1
-print("所有视频下载完成！")
+print("所有视频下载完成！文件保存在"+save_dir)
 
 
 
